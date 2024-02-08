@@ -1,26 +1,4 @@
-let data = [
-    {
-        id: "1",
-        title: "Test title1",
-        detail: "Test detail1",
-        rate: 5,
-        price: 1999,
-    },
-    {
-        id: "2",
-        title: "Test title2",
-        detail: "Test detail2",
-        rate: 3,
-        price: 500,
-    },
-    {
-        id: "3",
-        title: "Test title3",
-        detail: "Test detail3",
-        rate: 1,
-        price: 300,
-    },
-];
+let data = [];
 const CONSTANT = {
     stage: "MOCK",
     key: {
@@ -40,13 +18,31 @@ const count = document.querySelector("#count");
 $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const keyword = urlParams.get('search');
+    axios.post("http://172.28.7.125:3000/class_master/list",{}, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+        // other configuration there
+      })
+      .then(function (response) {
+        data = response.data
+        renderResultsList(data, keyword)
+        loadSuggession(data);
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    ;
+    renderResultsList(data, keyword)
     if(keyword){
         idKeyword.innerHTML = keyword;
         inputSearch.value = keyword;
         autoRun()
         renderResultsList(data, keyword)
     }else{
-        idKeyword.text = inputSearch.value
+        idKeyword.innerHTML = inputSearch.value
+        autoRun()
         defaultRun()
         
     }
@@ -58,8 +54,9 @@ $(document).ready(function() {
     $(searchBtn).on('click',() =>{
         console.log("searchBtn: ");
         renderResultsList(data, inputSearch.value)
+        idKeyword.innerHTML = inputSearch.value
     })
-
+    
 });
 
 function name(params) {
@@ -68,7 +65,9 @@ function name(params) {
 
 function autoRun() {
     console.log('autoRun: ');
+    
     loadSuggession(data);
+    
 }
 
 function defaultRun(){
@@ -79,7 +78,7 @@ function defaultRun(){
 function loadSuggession(params){
     params.map(item => {
         datalistOptions.innerHTML += `
-            <option  value="${item.title}">
+            <option  value="${item.class_name}">
         `
     });
 }
@@ -87,18 +86,18 @@ function loadSuggession(params){
 function renderMap(params) {
     
     idResultsList.innerHTML += `
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card">
                 <img 
-                src="./assets/default-img.png" 
+                src="${params.class_picture}" 
                 class="card-img-top" 
                 height="150px" 
                 style="object-fit: cover;"
                 alt="..."
                 >
                 <div class="card-body">
-                    <h5 class="card-title">${params.title}</h5>
-                    <p class="card-text">${params.detail}.</p>
+                    <h5 class="card-title">${params.class_name}</h5>
+                    <p class="card-text">${params.class_description}.</p>
                     <p class="card-list-course-footer d-flex">
                   
                     </p>
@@ -112,7 +111,7 @@ function renderResultsList(params, keywordParam) {
     if(params){
         idResultsList.innerHTML = ``;
         const res = params
-        .filter(itemFil => (itemFil.title || '').includes(keywordParam || ''))
+        .filter(itemFil => (itemFil.class_name || '').includes(keywordParam || ''))
         .map(renderMap)
 
         count.innerHTML = String(res.length);
