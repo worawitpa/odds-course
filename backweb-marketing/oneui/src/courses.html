@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>OneUI - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="OneUI - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="OneUI - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="OneUI">
+    <meta property="og:description" content="OneUI - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Fonts and OneUI framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/amethyst.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+  <body>
+    <!-- Page Container -->
+    <!--
+        Available classes for #page-container:
+
+    GENERIC
+
+      'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                  - Theme helper buttons [data-toggle="theme"],
+                                                  - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                  - ..and/or One.layout('dark_mode_[on/off/toggle]')
+
+    SIDEBAR & SIDE OVERLAY
+
+      'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+      'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+      'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+      'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+      'sidebar-dark'                              Dark themed sidebar
+
+      'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+      'side-overlay-o'                            Visible Side Overlay by default
+
+      'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+      'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+    HEADER
+
+      ''                                          Static Header if no class is added
+      'page-header-fixed'                         Fixed Header
+
+    HEADER STYLE
+
+      ''                                          Light themed Header
+      'page-header-dark'                          Dark themed Header
+
+    MAIN CONTENT LAYOUT
+
+      ''                                          Full width Main Content if no class is added
+      'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+      'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+    DARK MODE
+
+      'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    
+      <!-- END Side Overlay -->
+
+
+      <!-- Sidebar -->
+      <!--
+          Sidebar Mini Mode - Display Helper classes
+
+          Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+          Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+              If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+          Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+          Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+          Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <div class="bg-image" style="background-image: url('assets/media/various/promo-code.png');">
+          <div class="bg-primary-dark-op">
+            <div class="content content-full text-center py-7 pb-5">
+              <h1 class="h2 text-white pt-3">
+                Class Lists
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Page Content -->
+        <div class="content content-boxed">
+
+         
+
+          <div class="row items-push py-4">
+            <div id="data-container">
+                <!-- Data will be displayed here -->
+            </div>
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-city">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="fab fa-html5 fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    10 lessons &bull; 3 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Learn HTML5 in 10 simple and easy to follow steps
+                  </h4>
+                  <div class="fs-sm text-muted">November 5, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-flat">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="fab fa-css3 fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    12 lessons &bull; 5 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Be a pro with CSS3 in only two weeks
+                  </h4>
+                  <div class="fs-sm text-muted">November 1, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-amethyst">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-vector fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    4 lessons &bull; 2 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Using SVG is easier than ever
+                  </h4>
+                  <div class="fs-sm text-muted">October 27, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-smooth">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-rocket fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    18 lessons &bull; 25 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Build a modern web application from scratch
+                  </h4>
+                  <div class="fs-sm text-muted">October 25, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-default">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <span class="fs-lg fw-bold text-white-75">PS</span>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    5 lessons &bull; 19 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    UI Design in Photoshop: Tips  &amp; Tricks
+                  </h4>
+                  <div class="fs-sm text-muted">October 10, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-modern">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-user-following fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    9 lessons &bull; 10 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Marketing 101: All the basics
+                  </h4>
+                  <div class="fs-sm text-muted">October 1, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-warning">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-target fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    5 lessons &bull; 8 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    How to make your page convert in 5 steps
+                  </h4>
+                  <div class="fs-sm text-muted">September 19, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-success">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-support fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    21 lessons &bull; 29 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    How to provide rock star support
+                  </h4>
+                  <div class="fs-sm text-muted">September 15, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-info">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-social-twitter fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    7 lessons &bull; 6 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Social marketing the right way
+                  </h4>
+                  <div class="fs-sm text-muted">September 7, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-danger">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-briefcase fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    5 lessons &bull; 4 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Project management in 5 simple steps
+                  </h4>
+                  <div class="fs-sm text-muted">August 28, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-gray-dark">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-camcorder fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    7 lessons &bull; 9 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Learn how to create better screencasts
+                  </h4>
+                  <div class="fs-sm text-muted">August 19, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+
+            <!-- Course -->
+            <div id ="courses-box" class="col-md-6 col-lg-4 col-xl-3">
+              <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+                <div class="block-content block-content-full text-center bg-primary">
+                  <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+                    <i class="si si-chemistry fa-2x text-white-75"></i>
+                  </div>
+                  <div class="fs-sm text-white-75">
+                    12 lessons &bull; 7 hours
+                  </div>
+                </div>
+                <div class="block-content block-content-full">
+                  <h4 class="h5 mb-1">
+                    Learn how to create jQuery plugins
+                  </h4>
+                  <div class="fs-sm text-muted">August 5, 2021</div>
+                </div>
+              </a>
+            </div>
+            <!-- END Course -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-light">
+        <div class="content py-3">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/AVD6j" target="_blank">OneUI 5.2</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+    <script src="assets/js/oneui.app.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Function to fetch data from the API
+      function fetchData() {
+          // Make a GET request to the API endpoint using Axios
+          axios.post('https://b229-49-237-38-105.ngrok-free.app/class_master/list')
+              .then(function (response) {
+                console.log(response.data);
+                  // Handle success: data received
+                  // Update HTML content with the fetched data
+                  var dataContainer = document.getElementById('data-container');
+                  var dataList = '';
+                  // Example: Display fetched data as a list
+            //       <div id ="courses-box" class="col-md-6 col-lg-4 col-xl-3">
+            //   <a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">
+            //     <div class="block-content block-content-full text-center bg-primary">
+            //       <div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">
+            //         <i class="si si-chemistry fa-2x text-white-75"></i>
+            //       </div>
+            //       <div class="fs-sm text-white-75">
+            //         12 lessons &bull; 7 hours
+            //       </div>
+            //     </div>
+            //     <div class="block-content block-content-full">
+            //       <h4 class="h5 mb-1">
+            //         Learn how to create jQuery plugins
+            //       </h4>
+            //       <div class="fs-sm text-muted">August 5, 2021</div>
+            //     </div>
+            //   </a>
+            // </div>
+                  response.data.forEach(function(item) {
+                    console.log('item', item);
+                      // dataList += '<li>' + item.class_master_id + '</li>'; // Assuming the API returns an array of objects with a 'name' property
+                      dataList += '<div id ="courses-box" class="col-md-6 col-lg-4 col-xl-3">';
+                      dataList += '<a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">';
+                      dataList += '<div class="block-content block-content-full text-center bg-primary">';
+                      dataList += '<div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">';
+                      dataList += '<i class="si si-chemistry fa-2x text-white-75"></i>';
+                      dataList += '</div>';
+                      dataList += '<div class="fs-sm text-white-75">';
+                      dataList += item.class_master_id + ' lessons &bull; ' + item.class_master_id + ' hours';
+                      dataList += '</div>';
+                      dataList += '</div>';
+                      dataList += '<div class="block-content block-content-full">';
+                      dataList += '<h4 class="h5 mb-1">';
+                      dataList += item.class_master_name;
+                      dataList += '</h4>';
+                      dataList += '<div class="fs-sm text-muted">' + item.class_master_date + '</div>';
+                      dataList += '</div>';
+                      dataList += '</a>';
+                      dataList += '</div>';
+                  });
+                  // dataList += '</ul>';
+                  console.log('dataList:',dataList);
+                                        dataContainer.innerHTML = dataList;
+
+                  
+              })
+              .catch(function (error) {
+                  // Handle error: request failed
+                  console.error('Error fetching data:', error);
+              });
+      }
+      
+      // Call fetchData function when the page loads
+      fetchData();
+      </script>
+
+  </body>
+</html>

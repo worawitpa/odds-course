@@ -117,6 +117,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.2;
+  font: sans-serif;
 }
 
 h1, .h1 {
@@ -10896,9 +10897,9 @@ header.masthead h1, header.masthead .h1 {
 
 .call-to-action {
   position: relative;
-  background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
-  background-size: cover;
+  background-color: white;
+  /* background: url("../assets/img/bg-masthead.jpg") no-repeat center center; */
+  /* background-size: cover; */
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
