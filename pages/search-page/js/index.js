@@ -56,11 +56,22 @@ $(document).ready(function() {
         renderResultsList(data, inputSearch.value)
         idKeyword.innerHTML = inputSearch.value
     })
+
+    $("#input-search").keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+         {
+           $('button[name = search-btn]').click();
+           return false;  
+         }
+       });   
     
 });
 
-function name(params) {
-    
+function goToDetail(params) {
+    const id = params;
+    console.log('goToDetail',id);
+    window.location.href = `../../../classDetail.html/${id}`;
 }
 
 function autoRun() {
@@ -87,7 +98,7 @@ function renderMap(params) {
     
     idResultsList.innerHTML += `
         <div class="col-md-6">
-            <div class="card">
+            <div class="card" onclick="goToDetail(\'${params.class_master_id}\')">
                 <img 
                 src="${params.class_picture}" 
                 class="card-img-top" 
