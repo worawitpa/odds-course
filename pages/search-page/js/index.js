@@ -18,7 +18,7 @@ const count = document.querySelector("#count");
 $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const keyword = urlParams.get('search');
-    axios.post("http://172.28.7.125:3000/class_master/list",{}, {
+    axios.post("https://b229-49-237-38-105.ngrok-free.app/class_master/list",{}, {
         headers: {
           'Content-Type': 'application/json'
         }
