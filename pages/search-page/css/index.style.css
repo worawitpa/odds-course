@@ -1,0 +1,25 @@
+body{
+    font-family: sans-serif;
+}
+.card-body-flex{
+    display: flex;
+    
+    justify-items: center;
+    justify-content: center;
+}
+
+.card-list-course-footer{
+    display: flex;
+}
+
+.card-list-course-footer  .stars-rate{
+    color: #fd7e14;
+}
+
+.card-list-course-footer  .price{
+    align-content: end;
+}
+
+.stars-rate-bg{
+    background-color: #fd7e14;
+}

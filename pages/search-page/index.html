@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/index.style.css">
+    <title>ODDS COURSE SEARCH</title>
+</head>
+<body>
+    <div class="container">
+        <!-- NOTE:: Search box -->
+        <div class="row mt-3">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <!-- <h5 class="card-title" style="margin: 12px 23px;">อัพสกิลอะไรดี</h5> -->
+                    <div class="card-body">
+                        <div class="card-body-flex">
+                            <p style="font-size: 18pt; margin-top: 1rem;">อัปสกิลอะไรดี?</p>
+                            &nbsp;
+                            &nbsp;
+                            <input class="form-control form-control-lg" style="width: 50%;" list="datalistOptions" id="input-search" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                            </datalist>
+                            &nbsp;
+                            <!-- <button type="button" class="btn btn-dark">Dark</button> -->
+                            <button type="button" class="btn btn" id="clear-btn"><i style="font-size: 18pt;" class="bi bi-x-lg"></i></i></button>
+                            <button type="button" class="btn btn-warning stars-rate-bg">
+                                &nbsp;
+                                <i style="font-size: 18pt;" class="bi bi-search"></i>
+                                &nbsp;
+                            </button>
+                            <!-- <button type="button" class="btn btn-warning"><i style="font-size: 18pt;" class="bi bi-search"></i></button> -->
+                            <!-- <button type="button" class="btn btn-secondary"><i style="font-size: 18pt;" class="bi bi-search"></i></button> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        
+        <!-- NOTE::  -->
+        <div class="row mt-3" >
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <p style="font-size: 18pt; margin-top: 1rem;">ผลการค้นหา 6 รายการ <strong>"<span id="id-keyword"></span>"</strong></p>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+        <!-- NOTE:: Card list results -->
+        <div class="row mt-3" >
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <div class="row row-cols-md-2 g-4" id="id-results-list">
+                    
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</html>
