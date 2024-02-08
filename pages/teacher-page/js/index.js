@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    callAPI()
-
+    // callAPI()
+    calltest()
 });
 
 function callAPI(){
@@ -8,4 +8,8 @@ function callAPI(){
         // handle success
         console.log(response)
     })
+}
+
+function calltest(){
+    console.log('test')
 }
