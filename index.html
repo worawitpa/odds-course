@@ -87,7 +87,19 @@
                                     <input name="search" class="form-control form-control-lg" id="emailAddressBelow" type="text" placeholder="ชื่อคอร์ส" />
 
                                 </div>
-                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">ค้นหา</button></div>
+                                <div class="col-auto">
+                                  <button class="btn btn-primary btn-lg" id="submitButton" type="submit">ค้นหา</button>
+                                  <script>
+                                    const submitBtn = document.querySelector("#submitButton")
+                                    const emailAddressBelow = document.querySelector("#emailAddressBelow")
+                                    submitBtn.addEventListener("click", () => {
+                                      gtag('event','search_input',{
+                                        key_word:"test"
+                                        // key_word:emailAddressBelow.value
+                                    });
+                                    })
+                                   </script>
+                                </div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
