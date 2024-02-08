@@ -17,7 +17,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Google tag (gtag.js) --> 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKYZNDV1QD"></script> 
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKYZNDV1QD"></script>  -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZKYZNDV1QD'); </script>
     </head>
     <body>
@@ -31,7 +32,7 @@
                 </div>
                 <li class="list-inline-item me-4">
                     <!-- https://worawitpa.github.io/odds-course/pages/search-page/index.html-->
-                    <a href="https://worawitpa.github.io/odds-course/pages/teacher-page/index.html"><img style="height: 60px; width: 60px;" src="assets/img/teacher.png" ></a>
+                    <a href="https://worawitpa.github.io/odds-course/pages/teacher-page/teacher-list.html"><img style="height: 60px; width: 60px;" src="assets/img/teacher.png" ></a>
                     <a href="https://worawitpa.github.io/odds-course/pages/calendar/calendar.html"><img style="height: 50px; width: 50px;" src="assets/img/calendar_833593.png" ></a>
 
                   </li>
@@ -113,7 +114,10 @@
         <!-- Icons Grid-->
         <section class="features-icons bg-light text-center">
             <div class="container">
-                <div class="row">
+              <div  class="row">
+                <div class="row items-push py-4" id="data-container"></div>
+              </div>
+                <!-- <div class="row">
                     <div class="col-lg-4">
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Agile_for_executives.png" alt="Card image cap">
@@ -176,7 +180,8 @@
                             </div>    
                         </div>
                       </div> 
-                </div>
+                </div> -->
+                
             </div>
         </section>
 
@@ -213,11 +218,71 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+        <script >
+          console.log("test")
+            function fetch() {
+          axios.post('https://b229-49-237-38-105.ngrok-free.app/class_master/list')
+              .then(function (response) {
+                console.log(response.data);
+                  // Handle success: data received
+                  // Update HTML content with the fetched data
+                  var dataContainer = document.getElementById('data-container');
+                  var dataList = '';
+                  response.data.forEach(function(item) {
+                    console.log('item', item);
+                    // <div class="card">
+                    //         <img class="card-img-top" src="assets/img/Agile_for_executives.png" alt="Card image cap">
+                    //         <div class="card-body">
+                    //           <h5 class="card-title">Card title</h5>
+                    //           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    //           <a href="../odds-course/classDetail.html" class="btn btn-primary">Go somewhere</a>
+                    //         </div>    
+                    //     </div>
+                      // dataList += '<li>' + item.class_master_id + '</li>'; // Assuming the API returns an array of objects with a 'name' property
+                      // <div class="col-lg-4">
+                        dataList += '<div class="col-lg-4">';
+                      dataList += '<div class="card">';
+                      dataList += '<img class="card-img-top" src=\"'+item.class_picture+'\">';
+                      dataList += '<div class="card-body">';
+                      dataList += '<h5 class="card-title">'+item.class_name+'</h5>';
+                      dataList += '<p class="card-text">'+item.class_description+'</p>';
+                      dataList += '</div>';
+                      // dataList += '<div class="fs-sm text-white-75">';
+                      // dataList += item.class_master_id + ' lessons &bull; ' + item.class_master_id + ' hours';
+                      // dataList += '</div>';
+                      dataList += '</div>';
+                      dataList += '</div>';
+                      // dataList += '<div class="block-content block-content-full">';
+                      // dataList += '<h4 class="h5 mb-1">';
+                      // dataList += item.class_master_name;
+                      // dataList += '</h4>';
+                      // dataList += '<div class="fs-sm text-muted">' + item.class_master_date + '</div>';
+                      // dataList += '</div>';
+                      // dataList += '</a>';
+                      // dataList += '</div>';
+                  });
+                  // dataList += '</ul>';
+                  // console.log('dataList:',dataList);
+                  dataContainer.innerHTML = dataList;
+
+                  
+              })
+              .catch(function (error) {
+                  // Handle error: request failed
+                  console.error('Error fetching data:', error);
+              });
+            }
+
+            fetch();
+        </script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js">
+
+        </script>
     </body>
 </html>
