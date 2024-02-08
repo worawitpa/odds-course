@@ -26,18 +26,16 @@
   </div>
   </nav>
     <div id='calendar'></div>
-
     <script>
-
+      var mock =[{id : 'C001_1', name: 'Agile For Executive'},{id : 'C002_1', name: 'Agile/Product Discovery'},{id : 'C002_2', name: 'Agile/Product Discovery'}];
+      var mockEvent = [{title:mock[0].id,start:'2024-02-08',url: 'https://worawitpa.github.io/odds-course/classDetail.html?class_id=C001_1'},
+      {title:mock[1].id,start:'2024-02-08',url: 'https://worawitpa.github.io/odds-course/classDetail.html?class_id=C001_1'},
+      {title:mock[2].id,start:'2024-02-25',url: 'https://worawitpa.github.io/odds-course/classDetail.html?class_id=C001_1'}]
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
-          events: [{
-            title: 'go to google',
-            start: '2024-02-08',
-            url: 'https://www.google.com/'
-          }]
+          events: mockEvent
         });
         calendar.render();
       });
@@ -52,5 +50,38 @@
             <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
             <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script>
+              // Function to fetch data from the API
+              // function fetchData() {
+              //     // Make a GET request to the API endpoint using Axios
+              //     const headers = {"Access-Control-Allow-Origin": "*"}
+              //     axios.post('https://b229-49-237-38-105.ngrok-free.app/class_master/list')
+              //         .then(function (response) {
+              //           console.log(response.data);
+                          // Handle success: data received
+                          // Update HTML content with the fetched data
+                          // var mock =response.data;
+                          // var mockEvent = [{title:mock[0].class_name,start:'2024-02-25',url: 'https://www.google.com/'}]
+                          // //console.log(mock[0]);
+                          // document.addEventListener('DOMContentLoaded', function() {
+                          //   var calendarEl = document.getElementById('calendar');
+                          //   var calendar = new FullCalendar.Calendar(calendarEl, {
+                          //     initialView: 'dayGridMonth',
+                          //     events: mockEvent
+                          //   });
+                          //   calendar.render();
+                          // });
+              //         })
+              //         .catch(function (error) {
+              //             // Handle error: request failed
+              //             console.error('Error fetching data:', error);
+              //         });
+              // }
+              
+              // Call fetchData function when the page loads
+              // fetchData();
+              </script>        
   </body>
 </html>
