@@ -198,6 +198,7 @@
     var downloadLink = document.createElement('a');
     downloadLink.href = imageUrl;
     downloadLink.download = 'downloaded_image.jpg'; // Specify the filename here
+    downloadLink.target = '_self'; // Ensure it opens in the current tab
     downloadLink.click();
 });
 
