@@ -57,6 +57,10 @@ $(document).ready(function() {
         idKeyword.innerHTML = inputSearch.value
     })
 
+    $("#logo-btn").on('click',() =>{
+        goToHomePage();
+    })
+
     $("#input-search").keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
@@ -71,8 +75,14 @@ $(document).ready(function() {
 function goToDetail(params) {
     const id = params;
     console.log('goToDetail',id);
-    window.location.href = `../../../classDetail.html/${id}`;
+    window.location.href = `../../../classDetail.html?class_id=${id}`;
 }
+
+function goToHomePage() {
+    console.log('goToHomePage');
+    window.location.href = `../../../index.html`;
+}
+
 
 function autoRun() {
     console.log('autoRun: ');
