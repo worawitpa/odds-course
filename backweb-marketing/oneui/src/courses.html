@@ -117,8 +117,8 @@
 
          
 
-          <div class="row items-push py-4">
-            <div id="data-container">
+          <div class="row items-push py-4" id="data-container">
+            <div id="">
                 <!-- Data will be displayed here -->
             </div>
             <!-- Course -->
@@ -430,7 +430,7 @@
                   response.data.forEach(function(item) {
                     console.log('item', item);
                       // dataList += '<li>' + item.class_master_id + '</li>'; // Assuming the API returns an array of objects with a 'name' property
-                      dataList += '<div id ="courses-box" class="col-md-6 col-lg-4 col-xl-3">';
+                      dataList += '<div class="col-md-6 col-lg-4 col-xl-3">';
                       dataList += '<a class="block block-rounded block-link-pop h-100 mb-0" href="manual-poster.html">';
                       dataList += '<div class="block-content block-content-full text-center bg-primary">';
                       dataList += '<div class="item item-2x item-circle bg-white-10 py-3 my-3 mx-auto">';
@@ -450,7 +450,7 @@
                       dataList += '</div>';
                   });
                   // dataList += '</ul>';
-                  console.log('dataList:',dataList);
+                  // console.log('dataList:',dataList);
                                         dataContainer.innerHTML = dataList;
 
                   
