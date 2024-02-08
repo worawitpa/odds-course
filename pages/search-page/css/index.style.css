@@ -4,9 +4,13 @@ body {
 
 .card-body-flex {
     display: flex;
-
     justify-items: center;
     justify-content: center;
+}
+
+.class-card {
+    height: 250px;
+    padding: 20px;
 }
 
 .card-list-course-footer {

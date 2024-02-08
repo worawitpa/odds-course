@@ -95,13 +95,22 @@ function renderMap(params) {
                 style="object-fit: cover;"
                 alt="..."
                 >
-                <div class="card-body">
+                <div class="class-card">
                     <h5 class="card-title">${params.class_name}</h5>
-                    <p class="card-text">${params.class_description}.</p>
+                    <p class="card-text" style="overflow: hidden;
+                    text-overflow: ellipsis; height: 100px;">${params.class_description}.</p>
                     <p class="card-list-course-footer d-flex">
-                  
+                    <p class="card-list-course-footer d-flex">
+                    <span class="stars-rate flex-grow-1">
+                        ${'<i class="bi bi-star-fill stars-rate"></i>'.repeat(Math.floor(params.rate))}
+                    </span>
+                    <span class="price">
+                        <strong>${params.price}฿</strong>
+                    </span>
+                </p>
                     </p>
                 </div>
+               
             </div>
         </div>
     `
