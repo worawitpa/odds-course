@@ -1,18 +1,19 @@
 (async function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const keyword = urlParams.get('search');
-    console.log('showkey',keyword);
-    const dataTeacher = await callAPITeacher();
+    const keyword = urlParams.get('teacher_id');
+    console.log("keyword",keyword);
+    const dataTeacher = await callAPITeacher(keyword);
     const getDataTeacher = dataTeacher[0]
     console.log(getDataTeacher)
     const education_list = getDataTeacher.education.split("|");
     document.getElementById('teacher_name').innerHTML = getDataTeacher.teacher_name + " " + getDataTeacher.teacher_lastname;
     document.getElementById('teacher_intro').innerHTML = getDataTeacher.intro;
     document.getElementById('teacher_pic').src = getDataTeacher.teacher_pic;
+    // $("#teacher_pic").src = getDataTeacher.teacher_pic;
     const teacherEducation = document.getElementById('teacher_education')
     teacherEducation.innerHTML = ''
     education_list.forEach(element => {
-        teacherEducation.innerHTML += ` <li>${element}</li>`
+        teacherEducation.innerHTML += ` <li><p class="mt-1">${element}</p></li>`
     });
     $(".skills-prog li")
       .find(".skills-bar")
@@ -82,9 +83,9 @@
       });
   }.call(this));
   
-  async function callAPITeacher(){
+  async function callAPITeacher(teacher_id){
     const body = {
-        teacher_id : "T001"
+        teacher_id : teacher_id
     }
     let response = await axios.post('http://localhost:3000/getTeacher',body);
     return response.data;
