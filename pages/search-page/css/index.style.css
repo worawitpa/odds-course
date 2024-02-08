@@ -1,25 +1,56 @@
-body{
+body {
     font-family: sans-serif;
 }
-.card-body-flex{
+
+.card-body-flex {
     display: flex;
-    
+
     justify-items: center;
     justify-content: center;
 }
 
-.card-list-course-footer{
+.suggestion {
+    position: relative;
+    display: inline-block;
+
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+
+.card-list-course-footer {
     display: flex;
 }
 
-.card-list-course-footer  .stars-rate{
-    color: #fd7e14;
+.card-list-course-footer .stars-rate {
+    color: #0056A9;
 }
 
-.card-list-course-footer  .price{
+.card-list-course-footer .price {
     align-content: end;
 }
 
-.stars-rate-bg{
-    background-color: #fd7e14;
+.stars-rate-bg {
+    background-color: #0056A9;
 }
