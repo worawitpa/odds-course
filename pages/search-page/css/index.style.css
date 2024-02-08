@@ -8,9 +8,8 @@ body {
     justify-content: center;
 }
 
-.btn:hover {
+.btn:hover{
     color: #0056A9;
-    
 }
 
 .class-card {
