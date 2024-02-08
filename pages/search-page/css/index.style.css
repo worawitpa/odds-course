@@ -8,6 +8,11 @@ body {
     justify-content: center;
 }
 
+.btn:hover {
+    color: #0056A9;
+    
+}
+
 .class-card {
     height: 250px;
     padding: 20px;
